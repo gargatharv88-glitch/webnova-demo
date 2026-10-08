@@ -1,0 +1,1284 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alex Morgan | Creative Designer</title>
+
+    <meta name="description"
+          content="Alex Morgan is a creative designer creating thoughtful digital experiences and modern visual identities.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f1eb;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(244, 241, 235, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #ddd8cf;
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #c96b3c;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 700;
+            color: #5d5a56;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #c96b3c;
+        }
+
+        .nav-contact {
+            padding: 11px 18px;
+            border-radius: 7px;
+            background: #171717;
+            color: white !important;
+        }
+
+        .nav-contact:hover {
+            background: #c96b3c !important;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 105px 0 90px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 75px;
+            align-items: center;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #55514c;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            margin-bottom: 22px;
+        }
+
+        .availability-dot {
+            width: 9px;
+            height: 9px;
+            background: #5b9b68;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 84px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            max-width: 780px;
+            margin-bottom: 27px;
+        }
+
+        .hero h1 em {
+            font-family: Georgia, serif;
+            font-weight: 400;
+            color: #c96b3c;
+        }
+
+        .hero-text {
+            max-width: 590px;
+            color: #66615b;
+            font-size: 17px;
+            margin-bottom: 31px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.25s;
+        }
+
+        .btn-dark {
+            background: #171717;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #c96b3c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #bbb4aa;
+            color: #292725;
+        }
+
+        .btn-outline:hover {
+            border-color: #171717;
+            transform: translateY(-2px);
+        }
+
+        /* PROFILE CARD */
+
+        .profile-card {
+            background: #ded8cd;
+            border-radius: 24px;
+            padding: 18px;
+            transform: rotate(2deg);
+        }
+
+        .profile-inner {
+            min-height: 440px;
+            border-radius: 17px;
+            background: #242321;
+            color: white;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .profile-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #aaa49c;
+        }
+
+        .profile-symbol {
+            width: 43px;
+            height: 43px;
+            border: 1px solid #77726b;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+        }
+
+        .profile-center {
+            text-align: center;
+        }
+
+        .initials {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            background: #c96b3c;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 25px;
+            font-family: Georgia, serif;
+            font-size: 52px;
+        }
+
+        .profile-center h2 {
+            font-size: 25px;
+            margin-bottom: 4px;
+        }
+
+        .profile-center p {
+            color: #aaa49c;
+            font-size: 13px;
+        }
+
+        .profile-bottom {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #45433f;
+            padding-top: 18px;
+            color: #aaa49c;
+            font-size: 11px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: #171717;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 70px;
+        }
+
+        .intro-label {
+            color: #c96b3c;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 900;
+        }
+
+        .intro h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .intro p {
+            color: #aaa7a2;
+            font-size: 17px;
+            max-width: 720px;
+            margin-bottom: 18px;
+        }
+
+        /* WORK */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: #c96b3c;
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 9px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .section-heading p {
+            max-width: 400px;
+            color: #706b65;
+            font-size: 14px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project {
+            border-radius: 17px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #ded9d1;
+        }
+
+        .project-visual {
+            min-height: 310px;
+            padding: 28px;
+            display: flex;
+            align-items: end;
+            background: #d9d0c4;
+        }
+
+        .project:nth-child(2) .project-visual {
+            background: #c7d0ca;
+        }
+
+        .project:nth-child(3) .project-visual {
+            background: #d5c5ba;
+        }
+
+        .project:nth-child(4) .project-visual {
+            background: #c8c4cf;
+        }
+
+        .visual-card {
+            background: rgba(255,255,255,0.86);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 13px;
+            padding: 22px;
+            width: 100%;
+        }
+
+        .visual-card small {
+            display: block;
+            color: #77716a;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .visual-card strong {
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 29px;
+            line-height: 1.1;
+        }
+
+        .project-info {
+            padding: 23px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .project-info p {
+            color: #77716a;
+            font-size: 12px;
+        }
+
+        .project-arrow {
+            width: 38px;
+            height: 38px;
+            border: 1px solid #d4cec5;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #e6e0d7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service {
+            padding: 27px;
+            background: #f7f4ef;
+            border-radius: 13px;
+            border: 1px solid #d8d1c7;
+        }
+
+        .service-number {
+            color: #c96b3c;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .service h3 {
+            font-size: 19px;
+            margin-bottom: 9px;
+        }
+
+        .service p {
+            color: #716c66;
+            font-size: 13px;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 75px;
+        }
+
+        .skills-copy h2 {
+            font-size: clamp(34px, 5vw, 53px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 18px;
+        }
+
+        .skills-copy p {
+            color: #706b65;
+            font-size: 15px;
+        }
+
+        .skills-list {
+            display: grid;
+            gap: 17px;
+        }
+
+        .skill {
+            border-bottom: 1px solid #d7d1c8;
+            padding-bottom: 17px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .skill strong {
+            font-size: 15px;
+        }
+
+        .skill span {
+            color: #77716a;
+            font-size: 12px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #c96b3c;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            gap: 70px;
+            align-items: end;
+        }
+
+        .contact h2 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        .contact p {
+            color: #f5d8ca;
+            max-width: 550px;
+            font-size: 16px;
+        }
+
+        .contact-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-link {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 10px;
+            padding: 17px 19px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.2s;
+        }
+
+        .contact-link:hover {
+            background: white;
+            color: #c96b3c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #171717;
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 40px;
+        }
+
+        .footer-name {
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .footer-name span {
+            color: #c96b3c;
+        }
+
+        .footer-top p {
+            color: #85817c;
+            font-size: 13px;
+            max-width: 350px;
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #aaa6a1;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #c96b3c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #302f2d;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            color: #6e6b67;
+            font-size: 11px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .intro-grid,
+            .skills-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-card {
+                max-width: 520px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .profile-card {
+                transform: none;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 15px;
+            }
+
+            .work-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-visual {
+                min-height: 250px;
+            }
+
+            .footer-top,
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <a href="portfolio.html" class="logo">
+                Alex<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact" class="nav-contact">Let's Talk</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="container hero-grid">
+
+            <div>
+
+                <div class="availability">
+                    <span class="availability-dot"></span>
+                    Available for selected projects
+                </div>
+
+                <h1>
+                    I create digital work with <em>purpose.</em>
+                </h1>
+
+                <p class="hero-text">
+                    I'm Alex Morgan, a creative designer focused on
+                    brand identities, websites and digital experiences
+                    that feel simple, memorable and human.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#work" class="btn btn-dark">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Start a Project
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-inner">
+
+                    <div class="profile-top">
+
+                        <span class="profile-label">
+                            Creative Portfolio
+                        </span>
+
+                        <span class="profile-symbol">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-center">
+
+                        <div class="initials">
+                            AM
+                        </div>
+
+                        <h2>
+                            Alex Morgan
+                        </h2>
+
+                        <p>
+                            Designer · Creative Thinker
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-bottom">
+
+                        <span>
+                            Based in London
+                        </span>
+
+                        <span>
+                            Est. 2018
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRO -->
+
+    <section class="intro" id="about">
+
+        <div class="container intro-grid">
+
+            <div>
+                <div class="intro-label">
+                    About Me
+                </div>
+            </div>
+
+            <div>
+
+                <h2>
+                    Good design should make things clearer,
+                    not louder.
+                </h2>
+
+                <br>
+
+                <p>
+                    I work with ambitious founders, growing businesses
+                    and creative teams to turn ideas into thoughtful
+                    digital experiences.
+                </p>
+
+                <p>
+                    My approach combines strategy, visual design and
+                    usability to create work that looks great and
+                    works even better.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORK -->
+
+    <section id="work">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">
+                        Selected Work
+                    </div>
+
+                    <h2>
+                        A few things I've made.
+                    </h2>
+                </div>
+
+                <p>
+                    A selection of recent projects across branding,
+                    web design and digital products.
+                </p>
+
+            </div>
+
+
+            <div class="work-grid">
+
+                <article class="project">
+
+                    <div class="project-visual">
+
+                        <div class="visual-card">
+
+                            <small>
+                                Brand Identity
+                            </small>
+
+                            <strong>
+                                North Studio
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>
+                                North Studio
+                            </h3>
+
+                            <p>
+                                Branding · Art Direction
+                            </p>
+
+                        </div>
+
+                        <div class="project-arrow">
+                            ↗
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project">
+
+                    <div class="project-visual">
+
+                        <div class="visual-card">
+
+                            <small>
+                                Digital Experience
+                            </small>
+
+                            <strong>
+                                Greenline
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>
+                                Greenline
+                            </h3>
+
+                            <p>
+                                Website · UX Design
+                            </p>
+
+                        </div>
+
+                        <div class="project-arrow">
+                            ↗
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project">
+
+                    <div class="project-visual">
+
+                        <div class="visual-card">
+
+                            <small>
+                                Campaign
+                            </small>
+
+                            <strong>
+                                Common Ground
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>
+                                Common Ground
+                            </h3>
+
+                            <p>
+                                Campaign · Visual Design
+                            </p>
+
+                        </div>
+
+                        <div class="project-arrow">
+                            ↗
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project">
+
+                    <div class="project-visual">
+
+                        <div class="visual-card">
+
+                            <small>
+                                Product Design
+                            </small>
+
+                            <strong>
+                                Forma
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>
+                                Forma
+                            </h3>
+
+                            <p>
+                                Product · Interface Design
+                            </p>
+
+                        </div>
+
+                        <div class="project-arrow">
+                            ↗
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">
+                        What I Do
+                    </div>
+
+                    <h2>
+                        From idea to finished experience.
+                    </h2>
+                </div>
+
+                <p>
+                    Flexible creative support for brands and businesses
+                    at different stages of growth.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Brand Identity
+                    </h3>
+
+                    <p>
+                        Strategy, visual identity, typography and
+                        brand systems that feel consistent.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Web Design
+                    </h3>
+
+                    <p>
+                        Modern websites designed around clarity,
+                        usability and meaningful interactions.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <h3>
+                        UI / UX Design
+                    </h3>
+
+                    <p>
+                        Thoughtful interfaces and user journeys
+                        that make digital products easier to use.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container skills-grid">
+
+            <div class="skills-copy">
+
+                <div class="section-label">
+                    Capabilities
+                </div>
+
+                <h2>
+                    The skills behind the work.
+                </h2>
+
+                <p>
+                    A balance of creative thinking, design craft
+                    and practical problem solving.
+                </p>
+
+            </div>
+
+
+            <div class="skills-list">
+
+                <div class="skill">
+                    <strong>Brand Strategy</strong>
+                    <span>01</span>
+                </div>
+
+                <div class="skill">
+                    <strong>Visual Identity</strong>
+                    <span>02</span>
+                </div>
+
+                <div class="skill">
+                    <strong>Web Design</strong>
+                    <span>03</span>
+                </div>
+
+                <div class="skill">
+                    <strong>User Experience</strong>
+                    <span>04</span>
+                </div>
+
+                <div class="skill">
+                    <strong>Art Direction</strong>
+                    <span>05</span>
+                </div>
+
+                <div class="skill">
+                    <strong>Creative Development</strong>
+                    <span>06</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container contact-grid">
+
+            <div>
+
+                <h2>
+                    Have a project in mind?
+                </h2>
+
+                <p>
+                    Whether you have a fully formed idea or just
+                    the beginning of one, let's start a conversation.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a
+                    href="mailto:gargatharv88@gmail.com?subject=Portfolio%20Project%20Enquiry"
+                    class="contact-link"
+                >
+                    Email Me
+                    <span>↗</span>
+                </a>
+
+                <a
+                    href="https://wa.me/918979978542?text=Hello%20Alex%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                    class="contact-link"
+                    target="_blank"
+                >
+                    WhatsApp
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div>
+
+                    <div class="footer-name">
+                        Alex<span>.</span>
+                    </div>
+
+                    <p>
+                        Creative designer building thoughtful
+                        brands and digital experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="#about">About</a>
+                    <a href="#work">Work</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+
+                    <a href="index.html">
+                        ← WebNova
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Alex Morgan. All rights reserved.
+                </span>
+
+                <span>
+                    Portfolio Demo by WebNova
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```
