@@ -1,0 +1,1090 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elevate Academy | Learn. Grow. Succeed.</title>
+<meta name="description" content="Elevate Academy — modern coaching and learning programs designed to help students achieve their goals.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:#080b14;
+    color:#f4f6ff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1160px,calc(100% - 36px));
+    margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(8,11,20,.88);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:-.5px;
+}
+
+.logo-mark{
+    width:35px;
+    height:35px;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:linear-gradient(135deg,#7c5cff,#42d9ff);
+    color:white;
+    font-size:16px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    font-size:13px;
+    color:#aab1c6;
+}
+
+.nav-links a{
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.nav-cta{
+    padding:11px 17px;
+    border-radius:8px;
+    background:#f4f6ff;
+    color:#111522!important;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    padding:110px 0 120px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(100,78,255,.22),transparent 32%),
+        radial-gradient(circle at 15% 80%,rgba(35,188,255,.11),transparent 28%),
+        #080b14;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-220px;
+    top:-220px;
+    border:1px solid rgba(124,92,255,.15);
+    border-radius:50%;
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:70px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 11px;
+    border:1px solid rgba(124,92,255,.35);
+    border-radius:999px;
+    background:rgba(124,92,255,.08);
+    color:#a998ff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.badge span{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#6ff0b0;
+}
+
+.hero h1{
+    max-width:720px;
+    margin-top:22px;
+    font-size:clamp(48px,7vw,82px);
+    line-height:1;
+    letter-spacing:-3.5px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#9a82ff,#55dfff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero-text{
+    max-width:600px;
+    margin-top:25px;
+    color:#9ca5bb;
+    font-size:16px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+    margin-top:34px;
+}
+
+.btn{
+    min-height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 22px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#8061ff,#4ed9ff);
+    color:#fff;
+    box-shadow:0 12px 35px rgba(92,92,255,.22);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 40px rgba(92,92,255,.3);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.13);
+    color:#e7eaf5;
+    background:rgba(255,255,255,.025);
+}
+
+.btn-outline:hover{
+    border-color:#8170ff;
+    transform:translateY(-3px);
+}
+
+/* HERO CARD */
+
+.hero-visual{
+    min-height:450px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.learning-card{
+    width:min(410px,100%);
+    padding:25px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+    box-shadow:0 35px 90px rgba(0,0,0,.4);
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.card-label{
+    color:#8f98ae;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.progress{
+    margin-top:25px;
+}
+
+.progress-row{
+    display:flex;
+    justify-content:space-between;
+    color:#cbd1e0;
+    font-size:13px;
+}
+
+.progress-row strong{
+    color:#75e6ff;
+}
+
+.progress-bar{
+    height:8px;
+    margin-top:10px;
+    border-radius:99px;
+    background:#202638;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:78%;
+    height:100%;
+    border-radius:99px;
+    background:linear-gradient(90deg,#8061ff,#55dfff);
+}
+
+.course-list{
+    margin-top:28px;
+    display:grid;
+    gap:10px;
+}
+
+.course{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:13px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:11px;
+    background:rgba(255,255,255,.025);
+}
+
+.course-icon{
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    border-radius:9px;
+    background:rgba(124,92,255,.13);
+}
+
+.course-text strong{
+    display:block;
+    font-size:12px;
+}
+
+.course-text span{
+    display:block;
+    margin-top:2px;
+    color:#7f879a;
+    font-size:10px;
+}
+
+/* COMMON */
+
+section{
+    padding:100px 0;
+}
+
+.section-heading{
+    max-width:700px;
+    margin-bottom:50px;
+}
+
+.eyebrow{
+    color:#8e7cff;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    margin-top:13px;
+    font-size:clamp(38px,5vw,58px);
+    line-height:1.05;
+    letter-spacing:-2px;
+}
+
+.section-heading p{
+    margin-top:17px;
+    color:#8e97ab;
+    font-size:15px;
+}
+
+/* PROGRAMS */
+
+.programs{
+    background:#0b0f1a;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+}
+
+.program{
+    padding:29px;
+    min-height:270px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:15px;
+    background:rgba(255,255,255,.025);
+    transition:.25s;
+}
+
+.program:hover{
+    transform:translateY(-6px);
+    border-color:rgba(125,100,255,.5);
+}
+
+.program-icon{
+    width:47px;
+    height:47px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:rgba(124,92,255,.12);
+    font-size:21px;
+}
+
+.program h3{
+    margin-top:20px;
+    font-size:21px;
+}
+
+.program p{
+    margin-top:10px;
+    color:#858da1;
+    font-size:13px;
+}
+
+.program-link{
+    display:inline-block;
+    margin-top:20px;
+    color:#8e7cff;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* RESULTS */
+
+.results{
+    background:#080b14;
+}
+
+.results-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.result-list{
+    display:grid;
+    gap:15px;
+}
+
+.result{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    padding:19px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:12px;
+    background:rgba(255,255,255,.025);
+}
+
+.check{
+    width:30px;
+    height:30px;
+    flex-shrink:0;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:rgba(75,220,170,.1);
+    color:#65e7b0;
+    font-size:13px;
+}
+
+.result strong{
+    display:block;
+    font-size:14px;
+}
+
+.result span{
+    display:block;
+    margin-top:3px;
+    color:#7f8799;
+    font-size:12px;
+}
+
+.result-visual{
+    padding:35px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(86,215,255,.13),transparent 35%),
+        rgba(255,255,255,.025);
+}
+
+.score{
+    display:flex;
+    align-items:flex-end;
+    gap:12px;
+}
+
+.score strong{
+    font-size:72px;
+    line-height:.9;
+    background:linear-gradient(90deg,#9b82ff,#58dcff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.score span{
+    color:#8c94a8;
+    font-size:12px;
+    padding-bottom:8px;
+}
+
+.chart{
+    height:150px;
+    margin-top:35px;
+    display:flex;
+    align-items:flex-end;
+    gap:9px;
+}
+
+.bar{
+    flex:1;
+    border-radius:6px 6px 2px 2px;
+    background:linear-gradient(180deg,#59dfff,#705cff);
+}
+
+.bar:nth-child(1){height:32%}
+.bar:nth-child(2){height:42%}
+.bar:nth-child(3){height:48%}
+.bar:nth-child(4){height:61%}
+.bar:nth-child(5){height:68%}
+.bar:nth-child(6){height:79%}
+.bar:nth-child(7){height:91%}
+
+/* STATS */
+
+.stats{
+    background:#0c101b;
+}
+
+.stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat-card{
+    padding:27px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:14px;
+    background:rgba(255,255,255,.02);
+}
+
+.stat-card strong{
+    display:block;
+    font-size:35px;
+    background:linear-gradient(90deg,#a28dff,#61ddff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.stat-card span{
+    display:block;
+    margin-top:6px;
+    color:#828a9d;
+    font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+    padding:105px 0;
+    text-align:center;
+    background:
+        radial-gradient(circle at 50% 0,rgba(105,81,255,.2),transparent 45%),
+        #080b14;
+}
+
+.cta-box{
+    max-width:850px;
+    margin:auto;
+    padding:70px 30px;
+    border:1px solid rgba(124,92,255,.2);
+    border-radius:20px;
+    background:rgba(255,255,255,.025);
+}
+
+.cta h2{
+    font-size:clamp(40px,6vw,65px);
+    line-height:1;
+    letter-spacing:-2px;
+}
+
+.cta h2 span{
+    color:#8f7dff;
+}
+
+.cta p{
+    max-width:600px;
+    margin:20px auto 30px;
+    color:#8d96a9;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:32px 0;
+    border-top:1px solid rgba(255,255,255,.07);
+    background:#060810;
+}
+
+.footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-logo{
+    font-size:18px;
+    font-weight:800;
+}
+
+.footer p,
+.footer-links{
+    color:#687083;
+    font-size:11px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+}
+
+.footer-links a:hover{
+    color:#9d8cff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:85px 0 90px;
+    }
+
+    .hero-grid,
+    .results-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        min-height:350px;
+    }
+
+    .program-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        font-size:51px;
+        letter-spacing:-2px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-visual{
+        min-height:330px;
+    }
+
+    .program-grid,
+    .stat-grid{
+        grid-template-columns:1fr;
+    }
+
+    .result-visual{
+        padding:25px;
+    }
+
+    .score strong{
+        font-size:57px;
+    }
+
+    .cta-box{
+        padding:50px 20px;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            <span class="logo-mark">E</span>
+            Elevate Academy
+        </a>
+
+        <nav class="nav-links">
+            <a href="#programs">Programs</a>
+            <a href="#results">Results</a>
+            <a href="#about">Why Us</a>
+            <a href="#start" class="nav-cta">Start Learning</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="badge">
+                <span></span>
+                Admissions Open
+            </div>
+
+            <h1>
+                Learn smarter.<br>
+                Grow <span>faster.</span>
+            </h1>
+
+            <p class="hero-text">
+                Practical coaching, expert mentors and a clear learning
+                path designed to help ambitious students turn goals into
+                real results.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#start" class="btn btn-primary">
+                    Start Your Journey →
+                </a>
+
+                <a href="#programs" class="btn btn-outline">
+                    Explore Programs
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="learning-card">
+
+                <div class="card-top">
+                    <span class="card-label">Your Progress</span>
+                    <span>⚡</span>
+                </div>
+
+                <div class="progress">
+
+                    <div class="progress-row">
+                        <span>Overall Progress</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+                <div class="course-list">
+
+                    <div class="course">
+                        <div class="course-icon">📚</div>
+                        <div class="course-text">
+                            <strong>Smart Study Skills</strong>
+                            <span>Completed · 8 lessons</span>
+                        </div>
+                    </div>
+
+                    <div class="course">
+                        <div class="course-icon">🎯</div>
+                        <div class="course-text">
+                            <strong>Exam Strategy</strong>
+                            <span>In progress · 5 lessons</span>
+                        </div>
+                    </div>
+
+                    <div class="course">
+                        <div class="course-icon">🧠</div>
+                        <div class="course-text">
+                            <strong>Critical Thinking</strong>
+                            <span>Next · 6 lessons</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">Our Programs</div>
+
+            <h2>
+                Everything you need<br>
+                to move forward.
+            </h2>
+
+            <p>
+                Focused programs built around practical learning,
+                personal guidance and measurable progress.
+            </p>
+
+        </div>
+
+        <div class="program-grid">
+
+            <article class="program">
+                <div class="program-icon">🎓</div>
+
+                <h3>Academic Excellence</h3>
+
+                <p>
+                    Build stronger fundamentals, improve study habits
+                    and prepare confidently for important exams.
+                </p>
+
+                <a href="#start" class="program-link">
+                    Learn more →
+                </a>
+            </article>
+
+            <article class="program">
+                <div class="program-icon">🧠</div>
+
+                <h3>Skill Development</h3>
+
+                <p>
+                    Develop communication, critical thinking, creativity
+                    and problem-solving skills for the real world.
+                </p>
+
+                <a href="#start" class="program-link">
+                    Learn more →
+                </a>
+            </article>
+
+            <article class="program">
+                <div class="program-icon">🚀</div>
+
+                <h3>Career Preparation</h3>
+
+                <p>
+                    Discover your strengths, explore career paths and
+                    create a practical roadmap for your future.
+                </p>
+
+                <a href="#start" class="program-link">
+                    Learn more →
+                </a>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESULTS -->
+
+<section class="results" id="results">
+
+    <div class="container results-grid">
+
+        <div>
+
+            <div class="section-heading">
+
+                <div class="eyebrow">Built for Results</div>
+
+                <h2>
+                    Progress you can actually see.
+                </h2>
+
+                <p>
+                    Our coaching approach combines structured learning,
+                    regular feedback and personalized guidance.
+                </p>
+
+            </div>
+
+            <div class="result-list">
+
+                <div class="result">
+                    <div class="check">✓</div>
+
+                    <div>
+                        <strong>Personalized Learning Plans</strong>
+                        <span>A clear roadmap based on individual goals.</span>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="check">✓</div>
+
+                    <div>
+                        <strong>Expert Mentorship</strong>
+                        <span>Get guidance from experienced educators.</span>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <div class="check">✓</div>
+
+                    <div>
+                        <strong>Weekly Progress Tracking</strong>
+                        <span>Know what is working and where to improve.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="result-visual">
+
+            <div class="card-label">
+                STUDENT PERFORMANCE
+            </div>
+
+            <div class="score">
+                <strong>92%</strong>
+                <span>Average improvement</span>
+            </div>
+
+            <div class="chart">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT / STATS -->
+
+<section class="stats" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">Why Elevate</div>
+
+            <h2>
+                Trusted by learners<br>
+                who want more.
+            </h2>
+
+        </div>
+
+        <div class="stat-grid">
+
+            <div class="stat-card">
+                <strong>8+</strong>
+                <span>Years of teaching experience</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>2,500+</strong>
+                <span>Students guided</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>94%</strong>
+                <span>Student satisfaction</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>4.9★</strong>
+                <span>Average student rating</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="start">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="eyebrow">
+                Your Next Chapter Starts Here
+            </div>
+
+            <h2>
+                Ready to <span>level up?</span>
+            </h2>
+
+            <p>
+                Talk to our team and discover the right learning program
+                for your goals.
+            </p>
+
+            <div class="buttons" style="justify-content:center;">
+
+                <a
+                    href="https://wa.me/918979978542?text=Hi%20Elevate%20Academy%2C%20I%20want%20to%20know%20about%20your%20coaching%20programs."
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary"
+                >
+                    Talk to a Mentor
+                </a>
+
+                <a
+                    href="mailto:gargatharv88@gmail.com?subject=Elevate%20Academy%20Enquiry"
+                    class="btn btn-outline"
+                >
+                    Send an Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div class="container footer">
+
+        <div class="footer-logo">
+            Elevate Academy
+        </div>
+
+        <p>
+            © 2026 Elevate Academy. Learn. Grow. Succeed.
+        </p>
+
+        <div class="footer-links">
+            <a href="#programs">Programs</a>
+            <a href="#results">Results</a>
+            <a href="#start">Contact</a>
+            <a href="index.html">← WebNova</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
